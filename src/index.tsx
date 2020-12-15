@@ -10,7 +10,7 @@ let app = document.getElementById('root');
 if (app) {
   // 1. Set up the browser history with the updated location
   // (minus the # sign)
-const path = (/#!(\/.*)$/.exec(location.hash) || [])[1];
+const path = (/#!(\/.*)$/.exec(window.location.hash) || [])[1];
 if (path) {
   history.replace(path);
 }

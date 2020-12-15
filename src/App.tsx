@@ -8,9 +8,10 @@ import Video from "./video/video";
 import BDCard from "./bd-card/bdCard";
 
 function App() {
+  console.log(process.env.PUBLIC_URL)
   return (
     <div className="root-container">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="container">
           <nav className="nav-bar">
             <Button toURL="/home" btnText="Home" />
@@ -19,15 +20,15 @@ function App() {
             <Button toURL="/fav-video" btnText="Your favourite video" />
           </nav>
           <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/bdCake" exact>
-              <BDCake />
-            </Route>
-            <Route path="/bdCard" exact>
-              <BDCard />
-            </Route>
+            <Route path="/" exact component={Home} />
+              {/* <Home />
+            </Route> */}
+            <Route path="/bdCake" exact component={BDCake} />
+              {/* <BDCake />
+            </Route> */}
+            <Route path="/bdCard" exact component={BDCard} />
+              {/* <BDCard />
+            </Route> */}
             <Route path="/fav-video" exact>
               <Video />
             </Route>
