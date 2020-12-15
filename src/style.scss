@@ -1,0 +1,33 @@
+$bg: #fbf6f6;
+body {
+  background: $bg;
+  display: flex;
+}
+
+html,
+body,
+#root,
+#app,
+#app > div {
+  height: 100%;
+  width: 100%;
+}
+.root-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-bar {
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 25px;
+}
